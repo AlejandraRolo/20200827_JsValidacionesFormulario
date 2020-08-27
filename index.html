@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScripts Validaciones</title>
+    <meta name="authors" content="Yazmín Alejandra Rodriguez">
+  
+    <link rel="styleSheet" href="./assets/css/index.css" type="text/css">
+</head>
+
+<body>
+    <form class="formContact" onsubmit="validarFormulario(event)">
+        <div class="camposForm">
+            <label for="">Nombre</label>
+            <input id="inputNombre" type="text">
+            <span id="nombreMensaje" class="mensajeAlerta"></span>
+        </div>
+        <div class="camposForm">
+            <label for="">Apellido</label>
+            <input id="inputApellido" type="text">
+            <span id="apellidoMensaje" class="mensajeAlerta"></span>
+        </div>
+        <div class="camposForm">
+            <label for="">Correo</label>
+            <input id="inputCorreo" type="email">
+            <span id="correoMensaje" class="mensajeAlerta"></span>
+        </div>
+        <div class="camposForm">
+            <label for="">Celular</label>
+            <input id="inputCelular" type="number">
+            <span id="celularMensaje" class="mensajeAlerta"></span>
+        </div>
+        <div>
+            <input type="submit" class="button-redondo" value="Enviar">
+        </div>
+    </form>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./assets/js/validaciones.js"></script> <!--Conectamos la hoja de estilos-->
+</body>
+</html>

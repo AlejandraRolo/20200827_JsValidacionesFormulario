@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* con esta propiedad establecemos que el objeto no afecte su tamaño independiente de las propiedades que se definan, por ejemplo un padding*/
+}
+
+.formContact{
+    width: 400px;
+    margin: 0px auto;   /*Centra el elemento en el contenedor html */
+    margin-top: 100px;
+}
+.camposForm{
+   margin-bottom: 30px;
+   display: flex;
+   flex-direction: column;
+}
+
+div.camposForm>label{
+    margin-bottom: 20px;
+}
+
+div.camposForm>input{
+    padding: 1em;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.alert{
+    background-color:rgba(248, 170, 170, 0.61);
+}
+
+.mensajeAlerta{
+    color:red;
+    margin-top: 10px;
+}
+
+input[type=submit]{
+    padding: 1em;
+    background-color: #1B7FB5;
+    color: white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Dosis', sans-serif;
+}
+
+.button-redondo{
+    border-radius: 10px;
+    width: 100px;
+    font-size: 14px;
+}
