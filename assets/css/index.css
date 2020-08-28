@@ -4,19 +4,26 @@
     box-sizing: border-box; /* con esta propiedad establecemos que el objeto no afecte su tamaño independiente de las propiedades que se definan, por ejemplo un padding*/
 }
 
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #337ab7;
+    color: white;
+    font-size: 16px;
+}
+
 .formContact{
     width: 400px;
     margin: 0px auto;   /*Centra el elemento en el contenedor html */
     margin-top: 100px;
 }
 .camposForm{
-   margin-bottom: 30px;
+   margin-bottom: 20px;
    display: flex;
    flex-direction: column;
 }
 
 div.camposForm>label{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 div.camposForm>input{
@@ -35,12 +42,13 @@ div.camposForm>input{
     margin-top: 10px;
 }
 
-input[type=submit]{
+input[type=submit],
+input[type=reset]{
     padding: 1em;
-    background-color: #1B7FB5;
+    background-color:#d15f00;
     color: white;
     border: none;
-    margin: 5px;
+    margin: 2px;
     cursor: pointer;
     font-family: 'Dosis', sans-serif;
 }
@@ -49,4 +57,8 @@ input[type=submit]{
     border-radius: 10px;
     width: 100px;
     font-size: 14px;
+}
+
+input[type=reset].resetear{
+    background-color: black;
 }

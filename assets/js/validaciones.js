@@ -1,3 +1,9 @@
+/* BOTON */
+const btnReset = document.getElementById('reset'); // obtener todas las propiedades del control
+
+
+/* INPUTS */
+
 // nombre
 const inputName = document.getElementById('inputNombre'); // obtener todas las propiedades del control
 const mensajeNombre = document.getElementById('nombreMensaje'); // obtener todas las propiedades del control
@@ -40,6 +46,49 @@ function validarFormulario(event){
         celularMensaje.innerText = 'Llene este campo por favor';
     }
 
-    //swal("Por favor no olvide comletar todos los campos!");
-    swal("Alerta!", "Por favor no olvide comletar todos los campos!!", "warning");
+    //  darle un tiempo de espera a que direccione a la siguiente página
+    setTimeout(()=>{
+        //swal("Por favor no olvide comletar todos los campos!");
+        swal("Alerta!", "Por favor no olvide completar todos los campos!!", "warning");
+    },2000); // 2000 significa 2 segundos
 }
+
+
+/* Aqui estamos invocando el evento keydown que es cuando precionamos una tecla */
+// vamos a retirar color y mensaje de validación si el usuario  digita un valor en el input
+
+inputName.addEventListener("keydown", ()=>{
+    inputName.classList.remove('alert');
+    mensajeNombre.innerText = '';
+})
+
+inputApellido.addEventListener("keydown", ()=>{
+    inputApellido.classList.remove('alert');
+    apellidoMensaje.innerText = '';
+})
+
+inputCorreo.addEventListener("keydown", ()=>{
+    inputCorreo.classList.remove('alert');
+    correoMensaje.innerText = '';
+})
+
+inputCelular.addEventListener("keydown", ()=>{
+    inputCelular.classList.remove('alert');
+    celularMensaje.innerText = '';
+})
+
+function limpiarValidacionForms(){
+    inputName.classList.remove('alert');
+    mensajeNombre.innerText = '';
+    inputApellido.classList.remove('alert');
+    apellidoMensaje.innerText = '';
+    inputCorreo.classList.remove('alert');
+    correoMensaje.innerText = '';
+    inputCelular.classList.remove('alert');
+    celularMensaje.innerText = '';
+}
+
+btnReset.addEventListener("click", ()=>{
+    limpiarValidacionForms();
+})
+
